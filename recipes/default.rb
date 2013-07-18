@@ -27,7 +27,8 @@ chef_handler "RiemannReporting" do
   arguments [
     :riemann_host => node["chef_riemann"]["riemann_host"],
     :riemann_port => node["chef_riemann"]["riemann_port"],
-    :ttl => node["chef_riemann"]["ttl"]
+    :ttl => node["chef_riemann"]["ttl"],
+    :tags => node["chef_riemann"]["tags"]
   ]
   action :enable
 end
