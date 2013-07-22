@@ -25,7 +25,7 @@ class RiemannReporting < Chef::Handler
 
     # run status
     run_event = {
-      host: node[:fqdn],
+      host: node[:hostname],
       service: "chef run_status",
       metric: run_status_metric,
       state: run_state,
@@ -35,7 +35,7 @@ class RiemannReporting < Chef::Handler
 
     # updated resources
     updated_resources = {
-      host: node[:fqdn],
+      host: node[:hostname],
       service: "chef updated_resources",
       metric: run_status.respond_to?(:updated_resources) ? run_status.updated_resources.length : 0,
       state: run_state,
@@ -45,7 +45,7 @@ class RiemannReporting < Chef::Handler
 
     # all resources
     all_resources = {
-      host: node[:fqdn],
+      host: node[:hostname],
       service: "chef all_resources",
       metric: run_status.respond_to?(:all_resources) ? run_status.all_resources.length : 0,
       state: run_state,
@@ -55,7 +55,7 @@ class RiemannReporting < Chef::Handler
 
     # elapsed time
     elapsed_time = {
-      host: node[:fqdn],
+      host: node[:hostname],
       service: "chef elapsed_time",
       metric: run_status.elapsed_time,
       state: run_state,
