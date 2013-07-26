@@ -21,8 +21,8 @@ Include the recipe at the start of your run list.
 
 # Attributes
 
-`riemann_host` - IP/Hostname of your riemann server
-`riemann_port` - Port for your riemann server
-`ttl` - TTL to set on events
-`tags` - Array of tags to add to events
+* `riemann_host` - IP/Hostname of your riemann server
+* `riemann_port` - Port for your riemann server
+* `ttl` - TTL to set on events
+* `tags` - Array of tags to add to events
 
