@@ -1,4 +1,3 @@
-require 'chef'
 require 'chef/handler'
 require 'riemann/client'
 
