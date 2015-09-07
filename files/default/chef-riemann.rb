@@ -29,7 +29,7 @@ class RiemannReporting < Chef::Handler
       metric: run_status_metric,
       state: run_state,
       tags: @tags,
-      tt: @ttl
+      ttl: @ttl
     }
 
     # updated resources
@@ -39,7 +39,7 @@ class RiemannReporting < Chef::Handler
       metric: run_status.respond_to?(:updated_resources) ? run_status.updated_resources.length : 0,
       state: run_state,
       tags: @tags,
-      tt: @ttl
+      ttl: @ttl
     }
 
     # all resources
@@ -49,7 +49,7 @@ class RiemannReporting < Chef::Handler
       metric: run_status.respond_to?(:all_resources) ? run_status.all_resources.length : 0,
       state: run_state,
       tags: @tags,
-      tt: @ttl
+      ttl: @ttl
     }
 
     # elapsed time
@@ -59,7 +59,7 @@ class RiemannReporting < Chef::Handler
       metric: run_status.elapsed_time,
       state: run_state,
       tags: @tags,
-      tt: @ttl
+      ttl: @ttl
     }
 
     # submit events
